@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.udacity.elitefeetrunningshoes.R
 import com.udacity.elitefeetrunningshoes.databinding.FragmentLoginBinding
 
@@ -23,6 +24,12 @@ class LoginFragment : Fragment() {
             container,
             false
         )
+        binding.btnSubmit.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToOnboardingFragment())
+        }
+        binding.btnCreateAccount.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToOnboardingFragment())
+        }
         return binding.root
     }
 }

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.elitefeetrunningshoes.models.Shoe" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/item_selected"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/BLACK"
+            android:textSize="20sp"
+            android:text="@{shoe.company + ' ' + shoe.name}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/charcoal"
+            android:textSize="16sp"
+            android:text="@{shoe.description}"  />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/charcoal"
+            android:textSize="16sp"
+            android:text="@{String.format(@string/size, shoe.size)}" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/separator"
+            android:padding="8dp"/>
+
+
+    </LinearLayout>
+</layout>

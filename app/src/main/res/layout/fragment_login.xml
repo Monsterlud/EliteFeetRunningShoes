@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -12,23 +11,91 @@
         android:orientation="vertical"
         tools:context=".login.LoginFragment">
 
-        <EditText
-            android:id="@+id/et_username_input"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="32dp"
-            android:hint="@string/enter_username" />
+            android:text="@string/elite_feet_running_shoes"
+            android:textAlignment="center"
+            android:textSize="28sp" />
 
-        <EditText
-            android:id="@+id/et_password_input"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="32dp">
+
+            <EditText
+                android:id="@+id/et_email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_email" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp">
+
+            <EditText
+                android:id="@+id/et_password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_password" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:hint="@string/enter_password" />
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/login"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:width="40dp"
+                android:textColor="@color/WHITE"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btn_create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/create_account"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:width="40dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/WHITE"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"/>
+
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login with existing account or create a new one"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"/>
+
     </LinearLayout>
 
 </layout>

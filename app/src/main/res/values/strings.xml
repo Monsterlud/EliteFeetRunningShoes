@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">EliteFeetRunningShoes</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="enter_username">Enter Username</string>
+    <string name="enter_email">Enter Email</string>
     <string name="enter_password">Enter Password</string>
+    <string name="elite_feet_running_shoes">Elite Feet Running Shoes</string>
+    <string name="login">LOGIN</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="onboarding_title">Welcome to\nElite Feet Running</string>
+    <string name="onboarding_subtitle">performance training gear for athletes</string>
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="elite_feet_background_image">Elite Feet Background Image</string>
+    <string name="welcome_to_elite_feet_running">Elite\nFeet\nRunning\nInventory</string>
+    <string name="elevate_your_performance">Make\nIt\nCount!</string>
+    <string name="size">size: %.1f</string>
+    <string name="instructions_message">This app tracks all of the shoes in our current inventory. Each shoe in our inventory will appear in the inventory list on the next screen. You can add additional items to the inventory by clicking the \'+\' button.</string>
 </resources>

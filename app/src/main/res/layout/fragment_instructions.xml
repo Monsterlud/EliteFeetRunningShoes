@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".onboarding.OnboardingFragment">
+
+        <ImageView
+            android:id="@+id/full_screen_image_muted"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.3"
+            android:contentDescription="@string/elite_feet_background_image"
+            android:scaleType="centerCrop"
+            tools:layout_editor_absoluteX="-195dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:srcCompat="@drawable/onboarding_image" />
+
+        <TextView
+            android:id="@+id/tv_instructions_title"
+            android:layout_width="363dp"
+            android:layout_height="218dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="80dp"
+            android:inputType="textMultiLine"
+            android:text="@string/elevate_your_performance"
+            android:textColor="@color/charcoal"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_instructions_message"
+            android:layout_width="357dp"
+            android:layout_height="212dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:inputType="textMultiLine"
+            android:text="@string/instructions_message"
+            android:textColor="@color/charcoal"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_instructions_title" />
+
+        <Button
+            android:id="@+id/btn_instructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@color/RED"
+            android:padding="8dp"
+            android:text="Take a look at our current inventory"
+            android:textColor="@color/WHITE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_instructions_message" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
