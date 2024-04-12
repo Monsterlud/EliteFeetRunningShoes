@@ -5,12 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.udacity.elitefeetrunningshoes.shoelist.ShoeViewModel" />
     </data>
 
+    <!-- I chose a CoordinatorLayout here so that I could have a
+    Floating Action Button within the overall layout. I am using a simple
+    LinearLayout for the remaining Views -->
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,18 +23,15 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_shoelist_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="24dp"
-                android:text="Elite Feet Running Shoe Inventory"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+            <androidx.appcompat.widget.Toolbar
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/light_charcoal"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                android:id="@+id/toolbar"
+                app:title="@string/toolbar_title" />
 
             <ScrollView
                 android:layout_width="match_parent"

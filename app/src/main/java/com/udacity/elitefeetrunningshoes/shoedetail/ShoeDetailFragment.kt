@@ -8,10 +8,12 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.LifecycleOwner
 import com.udacity.elitefeetrunningshoes.R
 import com.udacity.elitefeetrunningshoes.databinding.FragmentShoeDetailBinding
 import com.udacity.elitefeetrunningshoes.models.Shoe
 import com.udacity.elitefeetrunningshoes.shoelist.ShoeViewModel
+import java.util.Locale
 
 class ShoeDetailFragment : Fragment() {
     private lateinit var binding: FragmentShoeDetailBinding
@@ -31,8 +33,8 @@ class ShoeDetailFragment : Fragment() {
             )
 
         binding.btnAddToInventory.setOnClickListener {
-            val name = binding.etShoeNameInput.text.toString()
-            val company = binding.etShoeCompanyInput.text.toString()
+            val name = binding.etShoeNameInput.text.toString().capitalizeFirstletter()
+            val company = binding.etShoeCompanyInput.text.toString().capitalizeFirstletter()
             val description = binding.etShoeDescriptionInput.text.toString()
             val url = binding.etImageInput.text.toString()
 
@@ -58,6 +60,8 @@ class ShoeDetailFragment : Fragment() {
                 Toast.makeText(activity, "Shoe size must be a number", Toast.LENGTH_SHORT).show()
             }
         }
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
     }
 
@@ -67,5 +71,13 @@ class ShoeDetailFragment : Fragment() {
         binding.etShoeDescriptionInput.text = null
         binding.etShoeSizeInput.text = null
         binding.etImageInput.text = null
+    }
+
+    fun String.capitalizeFirstletter() : String {
+        return this.replaceFirstChar {
+            if (it.isLowerCase()) {
+                it.titlecase(Locale.getDefault())
+            } else it.toString()
+        }
     }
 }

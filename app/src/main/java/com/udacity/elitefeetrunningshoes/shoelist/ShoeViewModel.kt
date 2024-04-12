@@ -4,14 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.elitefeetrunningshoes.models.Shoe
+import timber.log.Timber
 
 class ShoeViewModel : ViewModel() {
     private val _shoeList = MutableLiveData<List<Shoe>>()
     val shoeList: LiveData<List<Shoe>>
         get() = _shoeList
-
-    private val _error = MutableLiveData<String>()
-    val error: LiveData<String> = _error
 
     init {
         setShoeList()
@@ -31,8 +29,8 @@ class ShoeViewModel : ViewModel() {
                     "road racing",
                     listOf(
                         "https://www.nike.com/t/alphafly-3-mens-road-racing-shoes-6Nc43S/" +
-                            "FD8311-700?_gl=1*1eq92ol*_up*MQ..&gclid=Cj0KCQjwztOwBhD7ARIsAPDK" +
-                            "nkBTwhStCeMqXQwLSXyRKoHdEYt4uaHsfBS7BpOy1GSNHsrLVdRPimgaAtn_EALw_wcB&gclsrc=aw.ds",
+                                "FD8311-700?_gl=1*1eq92ol*_up*MQ..&gclid=Cj0KCQjwztOwBhD7ARIsAPDK" +
+                                "nkBTwhStCeMqXQwLSXyRKoHdEYt4uaHsfBS7BpOy1GSNHsrLVdRPimgaAtn_EALw_wcB&gclsrc=aw.ds",
                     ),
                 ),
                 Shoe(
@@ -56,7 +54,7 @@ class ShoeViewModel : ViewModel() {
                     "track & field distance spikes",
                     listOf(
                         "https://www.nike.com/t/pegasus-40-mens-road-running-shoes-extra-wide-z" +
-                            "D8H1c/DV3853-102https://www.nike.com/t/zoomx-dragoy-track-field-distance-spikes-0P9jtc/CV0400-101",
+                                "D8H1c/DV3853-102https://www.nike.com/t/zoomx-dragoy-track-field-distance-spikes-0P9jtc/CV0400-101",
                     ),
                 ),
                 Shoe(
@@ -136,7 +134,7 @@ class ShoeViewModel : ViewModel() {
                     "daily trainer",
                     listOf(
                         "https://www.saucony.com/en/endorphin-speed-4/58852M.html?dwvar_58852M_" +
-                            "color=S20940-129#cgid=mens-running&prefn1=isOnSale&prefv1=false&start=1",
+                                "color=S20940-129#cgid=mens-running&prefn1=isOnSale&prefv1=false&start=1",
                     ),
                 ),
                 Shoe(
@@ -146,7 +144,7 @@ class ShoeViewModel : ViewModel() {
                     "daily trainer",
                     listOf(
                         "https://www.saucony.com/en/kinvara-pro/56633M.html?dwvar_56633M_color=" +
-                            "S20847-138#cgid=mens-running&prefn1=isOnSale&prefv1=false&start=1",
+                                "S20847-138#cgid=mens-running&prefn1=isOnSale&prefv1=false&start=1",
                     ),
                 ),
                 Shoe(
@@ -156,7 +154,7 @@ class ShoeViewModel : ViewModel() {
                     "road racing",
                     listOf(
                         "https://www.saucony.com/en/endorphin-pro-3/52954M.html?dwvar_52954M_color=" +
-                            "S20755-33#cgid=mens-running&prefn1=isOnSale&prefv1=false&start=1",
+                                "S20755-33#cgid=mens-running&prefn1=isOnSale&prefv1=false&start=1",
                     ),
                 ),
                 Shoe(
@@ -166,7 +164,7 @@ class ShoeViewModel : ViewModel() {
                     "road racing",
                     listOf(
                         "https://www.newbalance.com/pd/fuelcell-supercomp-elite-v4/MRCELV4-44901.html?" +
-                            "dwvar_MRCELV4-44901_style=MRCELLA4",
+                                "dwvar_MRCELV4-44901_style=MRCELLA4",
                     ),
                 ),
                 Shoe(
@@ -176,7 +174,7 @@ class ShoeViewModel : ViewModel() {
                     "road racing",
                     listOf(
                         "https://www.newbalance.com/pd/fuelcell-supercomp-elite-v4/MRCELV4-44901.html?" +
-                            "dwvar_MRCELV4-44901_style=MRCELLA4",
+                                "dwvar_MRCELV4-44901_style=MRCELLA4",
                     ),
                 ),
                 Shoe(
@@ -186,7 +184,7 @@ class ShoeViewModel : ViewModel() {
                     "daily trainer",
                     listOf(
                         "https://www.newbalance.com/pd/fuelcell-rebel-v4/MFCXV4-41132.html?dwvar_" +
-                            "MFCXV4-41132_style=MFCXLK4",
+                                "MFCXV4-41132_style=MFCXLK4",
                     ),
                 ),
                 Shoe(
@@ -196,7 +194,7 @@ class ShoeViewModel : ViewModel() {
                     "max cushioned",
                     listOf(
                         "https://www.newbalance.com/pd/fuelcell-supercomp-trainer-v2/MRCXV3-45183.html?" +
-                            "dwvar_MRCXV3-45183_style=MRCXCA3",
+                                "dwvar_MRCXV3-45183_style=MRCXCA3",
                     ),
                 ),
                 Shoe(

@@ -4,7 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <!-- I chose ConstraintLayout here because I wanted the two
+    buttons to be horizontally chained and didn't want to resort to
+    a nested LinearLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,21 +15,27 @@
         tools:context=".login.LoginFragment">
 
         <TextView
+            android:id="@+id/tv_elite_feet_running_shoes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginTop="32dp"
             android:text="@string/elite_feet_running_shoes"
             android:textAlignment="center"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="60dp"
-            android:layout_marginEnd="32dp">
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_elite_feet_running_shoes">
 
             <EditText
                 android:id="@+id/et_email_input"
@@ -37,11 +46,15 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="32dp">
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailInputLayout">
 
             <EditText
                 android:id="@+id/et_password_input"
@@ -51,51 +64,52 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_gravity="center">
+            android:layout_marginTop="32dp"
+            android:width="40dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/login"
+            android:textAlignment="center"
+            android:textColor="@color/WHITE"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_create_account"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordInputLayout" />
 
-            <Button
-                android:id="@+id/btn_submit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/login"
-                android:textAlignment="center"
-                android:textSize="14sp"
-                android:width="40dp"
-                android:textColor="@color/WHITE"
-                android:background="@color/colorPrimaryDark"
-                android:layout_weight="1"
-                android:layout_marginEnd="4dp"/>
+        <Button
+            android:id="@+id/btn_create_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:width="40dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/create_account"
+            android:textAlignment="center"
+            android:textColor="@color/WHITE"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_login"
+            app:layout_constraintTop_toBottomOf="@id/passwordInputLayout"
+            app:layout_goneMarginStart="40dp" />
 
-            <Button
-                android:id="@+id/btn_create_account"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/create_account"
-                android:textAlignment="center"
-                android:textSize="14sp"
-                android:width="40dp"
-                android:background="@color/colorPrimaryDark"
-                android:textColor="@color/WHITE"
-                android:layout_weight="1"
-                android:layout_marginStart="4dp"/>
+        <TextView
+            android:id="@+id/tv_login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Login with existing account or create a new one"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_login" />
 
-        </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Login with existing account or create a new one"
-                android:layout_marginTop="8dp"
-                android:layout_gravity="center"/>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

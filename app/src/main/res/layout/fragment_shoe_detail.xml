@@ -4,6 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.elitefeetrunningshoes.shoelist.ShoeViewModel" />
+    </data>
+
+    <!-- I chose a ConstraintLayout here because of the fact that I
+    needed to have a few EditTexts to be in two columns -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -25,6 +33,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
+        <TextView
+            android:id="@+id/tv_list_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textSize="18dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_shoe_detail_title"
+            android:text="@{@string/items_in_inventory(viewModel.shoeList.size())}"
+            tools:text="total shoes in inventory: 24"/>
+
         <ImageView
             android:id="@+id/shoe_detail_separater"
             android:layout_width="wrap_content"
@@ -32,10 +53,9 @@
             android:src="@drawable/separator"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_shoe_detail_title"
-            app:layout_constraintVertical_bias="0.03" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_list_count"
+            app:layout_constraintVertical_bias="0.015" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputNameLayout"
@@ -43,6 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginTop="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shoe_detail_separater">

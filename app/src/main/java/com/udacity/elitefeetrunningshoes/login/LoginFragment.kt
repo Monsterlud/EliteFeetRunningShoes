@@ -24,7 +24,7 @@ class LoginFragment : Fragment() {
             container,
             false
         )
-        binding.btnSubmit.setOnClickListener {
+        binding.btnLogin.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToOnboardingFragment())
         }
         binding.btnCreateAccount.setOnClickListener {

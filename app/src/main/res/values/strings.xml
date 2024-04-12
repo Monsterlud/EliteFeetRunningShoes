@@ -10,8 +10,10 @@
     <string name="onboarding_subtitle">performance training gear for athletes</string>
     <string name="instructions">INSTRUCTIONS</string>
     <string name="elite_feet_background_image">Elite Feet Background Image</string>
-    <string name="welcome_to_elite_feet_running">Elite\nFeet\nRunning\nInventory</string>
+    <string name="welcome_to_elite_feet_running">Elite\nFeet\nInventory</string>
     <string name="elevate_your_performance">Make\nIt\nCount!</string>
+    <string name="toolbar_title">Elite Feet Inventory</string>
     <string name="size">size: %.1f</string>
+    <string name="items_in_inventory">total shoes in inventory: %d</string>
     <string name="instructions_message">This app tracks all of the shoes in our current inventory. Each shoe in our inventory will appear in the inventory list on the next screen. You can add additional items to the inventory by clicking the \'+\' button.</string>
 </resources>
