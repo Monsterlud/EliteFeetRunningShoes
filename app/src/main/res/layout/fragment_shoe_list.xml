@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.udacity.elitefeetrunningshoes.shoelist.ShoeListViewModel" />
+            type="com.udacity.elitefeetrunningshoes.shoelist.ShoeViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
