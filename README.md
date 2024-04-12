@@ -1,52 +1,42 @@
-# README Template
-
-Below is a template provided for use when building your README file for students.
-
-# Project Title
-
-Project description goes here.
+# Elite Feet Running Shoe Inventory App
 
 ## Getting Started
 
-Instructions for how to get a copy of the project running on your local machine.
+You should be able to run this app from within Android Studio using Android Gradle Plugin version 7.3.1, Gradle version 7.5,
+and Java version 17
 
 ### Dependencies
 
-```
-Examples here
-```
+This project uses the following dependencies:
+- AndroidX core
+- AndroidX appcompat
+- AndroidX constraintLayout
+- AndroidX navigation
+- AndroidX lifecycle (livedata, viewmodel)
+- AndroidX fragment
+- Google material
+- JakeWharton timber
 
-### Installation
-
-Step by step explanation of how to get a dev environment running.
-
-List out the steps
-
-```
-Give an example here
-```
-
-## Testing
-
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
-```
-Examples here
-```
 ## Project Instructions
 
-This section should contain all the student deliverables for this project.
+Running this project will launch the Login Screen. This screen contains two editable fields for email and password. There is no
+input validation for these fields. There are two buttons: Login and Create Account. For now, these two buttons navigate the user to the
+Onboarding Screen.
 
-## Built With
+![Login_Screen](images/login.png) 
 
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
+The Onboarding Screen contains a welcome to the app and a button that navigates the user to the Instructions Screen.
 
-Include all items used to build project.
+![Onboarding_Screen](images/onboarding.png) 
 
-## License
+The Instructions Screen contains a brief description of the list view and how to add another shoe to the inventory. The button navigates the user to the Inventory List Screen.
+
+![Instructions_Screen](images/instructions.png) 
+
+The Inventory List Screen contains a list of the current inventory in a ScrollView. Each item shows the company, the model, a description, and the size of the shoe. There is a toolbar icon that logs the user out of the app. There is also a FAB that navigates the user to the Detail Screen. The ScrollView gets the shoe list from the ViewModel as LiveData.
+
+![List_Screen](images/list.png) 
+
+The Detail Screen is where the user can add items to the inventory. At the top there is a message indicating the number of shoes in the current inventory. This information is retrieved from the ViewModel via LiveData. Under that, all the fields are presented for the user to add another item to the shoe inventory. These fields have validation for correct values. The 'Add to inventory' button adds this item to the shoe list, which is updated in the Inventory List Screen as well as the 'total shoes in inventory' TextView at the top of this page. The user is navigated back to the Inventory List Screen after adding the item to inventory.
+
+![Detail_Screen](images/detail.png) 
