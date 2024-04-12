@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.LifecycleOwner
 import com.udacity.elitefeetrunningshoes.R
 import com.udacity.elitefeetrunningshoes.databinding.FragmentShoeDetailBinding
 import com.udacity.elitefeetrunningshoes.models.Shoe

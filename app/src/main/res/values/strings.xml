@@ -16,4 +16,7 @@
     <string name="size">size: %.1f</string>
     <string name="items_in_inventory">total shoes in inventory: %d</string>
     <string name="instructions_message">This app tracks all of the shoes in our current inventory. Each shoe in our inventory will appear in the inventory list on the next screen. You can add additional items to the inventory by clicking the \'+\' button.</string>
+    <string name="add_to_inventory">Add to Inventory</string>
+    <string name="image_url">image url</string>
+    <string name="add_item_to_shoe_inventory">Add item to shoe inventory</string>
 </resources>

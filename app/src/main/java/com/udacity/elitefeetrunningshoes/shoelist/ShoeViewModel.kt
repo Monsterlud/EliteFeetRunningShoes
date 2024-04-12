@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.elitefeetrunningshoes.models.Shoe
-import timber.log.Timber
 
 class ShoeViewModel : ViewModel() {
     private val _shoeList = MutableLiveData<List<Shoe>>()

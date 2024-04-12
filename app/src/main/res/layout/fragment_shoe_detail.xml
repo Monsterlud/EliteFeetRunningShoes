@@ -144,7 +144,7 @@
                 android:id="@+id/et_image_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="image url" />
+                android:hint="@string/image_url" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,14 +156,13 @@
             android:layout_marginTop="24dp"
             android:background="@color/colorPrimaryDark"
             android:padding="8dp"
-            android:text="Add to Inventory"
+            android:text="@string/add_to_inventory"
             android:textAlignment="center"
             android:textColor="@color/WHITE"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputImageLayout" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

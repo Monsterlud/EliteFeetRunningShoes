@@ -1,7 +1,6 @@
 package com.udacity.elitefeetrunningshoes.shoelist
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
@@ -10,19 +9,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-
-import com.udacity.elitefeetrunningshoes.MainActivity
 import com.udacity.elitefeetrunningshoes.R
 import com.udacity.elitefeetrunningshoes.databinding.FragmentShoeListBinding
 import com.udacity.elitefeetrunningshoes.databinding.ShoeItemBinding
-import timber.log.Timber
-
 
 class ShoeListFragment : Fragment() {
     private lateinit var binding: FragmentShoeListBinding
@@ -61,7 +54,6 @@ class ShoeListFragment : Fragment() {
         binding.fab.setOnClickListener {
             findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
         }
-
         return binding.root
     }
 

@@ -11,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import com.udacity.elitefeetrunningshoes.R
 import com.udacity.elitefeetrunningshoes.databinding.FragmentInstructionsBinding
 
-
 class InstructionsFragment : Fragment() {
     private lateinit var binding: FragmentInstructionsBinding
     override fun onCreateView(

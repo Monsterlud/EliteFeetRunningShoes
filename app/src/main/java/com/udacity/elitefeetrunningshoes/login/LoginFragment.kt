@@ -11,7 +11,6 @@ import com.udacity.elitefeetrunningshoes.R
 import com.udacity.elitefeetrunningshoes.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
-
     private lateinit var binding: FragmentLoginBinding
 
     override fun onCreateView(
