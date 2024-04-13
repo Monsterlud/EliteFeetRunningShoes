@@ -4,18 +4,78 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.elitefeetrunningshoes.models.Shoe
+import java.util.Locale
 
 class ShoeViewModel : ViewModel() {
     private val _shoeList = MutableLiveData<List<Shoe>>()
     val shoeList: LiveData<List<Shoe>>
         get() = _shoeList
 
+    private val _toastMessage = MutableLiveData<String>()
+    val toastMessage: LiveData<String>
+        get() = _toastMessage
+
+    private val _navigateBack: MutableLiveData<Boolean> = MutableLiveData(false)
+    val navigateBack: LiveData<Boolean>
+        get() = _navigateBack
+
+    val name: MutableLiveData<String> = MutableLiveData("")
+    val company: MutableLiveData<String> = MutableLiveData("")
+    val description: MutableLiveData<String> = MutableLiveData("")
+    val shoeSize: MutableLiveData<String> = MutableLiveData("")
+    val imageUrl: MutableLiveData<String> = MutableLiveData("")
+
     init {
         setShoeList()
     }
 
-    fun addShoe(shoe: Shoe) {
+    fun addShoe() {
+        var size: Double = 0.0
+        try {
+            size = shoeSize.value.toString().toDouble()
+        } catch (e: NumberFormatException) {
+            _toastMessage.value = "Shoe size must be a number"
+            return
+        }
+        val shoe = Shoe(
+            name = name.value.toString().capitalizeFirstletter(),
+            size = size,
+            company = company.value.toString().capitalizeFirstletter(),
+            description = description.value.toString(),
+            images = listOf(imageUrl.value.toString())
+        )
+        if (name.value?.isEmpty() == true || company.value?.isEmpty() == true || description.value?.isEmpty() == true || imageUrl.value?.isEmpty() == true) {
+            _toastMessage.value = "All fields must be filled out"
+            return
+        }
         _shoeList.value = _shoeList.value?.plus(shoe)
+        clearEditTexts()
+        _navigateBack.value = true
+    }
+
+    fun resetNavigateBack() {
+        _navigateBack.value = false
+    }
+
+    private fun clearEditTexts() {
+        name.value = ""
+        company.value = ""
+        description.value = ""
+        shoeSize.value = ""
+        imageUrl.value = ""
+    }
+
+    fun clearToastMessage() {
+        _toastMessage.value = ""
+    }
+
+
+    fun String.capitalizeFirstletter(): String {
+        return this.replaceFirstChar {
+            if (it.isLowerCase()) {
+                it.titlecase(Locale.getDefault())
+            } else it.toString()
+        }
     }
 
     private fun setShoeList() {

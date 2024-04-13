@@ -72,6 +72,7 @@
                 android:id="@+id/et_shoe_name_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@={viewModel.name}"
                 android:hint="name" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -90,6 +91,7 @@
                 android:id="@+id/et_shoe_company_input"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
+                android:text="@={viewModel.company}"
                 android:hint="company" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -107,6 +109,7 @@
                 android:id="@+id/et_shoe_size_input"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
+                android:text="@={viewModel.shoeSize}"
                 android:hint="shoe size" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -125,6 +128,7 @@
                 android:id="@+id/et_shoe_description_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@={viewModel.description}"
                 android:hint="description" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -144,6 +148,7 @@
                 android:id="@+id/et_image_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@={viewModel.imageUrl}"
                 android:hint="@string/image_url" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -160,6 +165,7 @@
             android:textAlignment="center"
             android:textColor="@color/WHITE"
             android:textSize="14sp"
+            android:onClick="@{() -> viewModel.addShoe()}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputImageLayout" />

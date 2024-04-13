@@ -37,6 +37,6 @@ The Inventory List Screen contains a list of the current inventory in a ScrollVi
 
 ![List_Screen](images/list1.png) 
 
-The Detail Screen is where the user can add items to the inventory. At the top there is a message indicating the number of shoes in the current inventory. This information is retrieved from the ViewModel via LiveData. Under that, all the fields are presented for the user to add another item to the shoe inventory. These fields have validation for correct values. The 'Add to inventory' button adds this item to the shoe list, which is updated in the Inventory List Screen as well as the 'total shoes in inventory' TextView at the top of this page. The user is navigated back to the Inventory List Screen after adding the item to inventory.
+The Detail Screen is where the user can add items to the inventory. At the top there is a message indicating the number of shoes in the current inventory. This information is retrieved from the ViewModel via LiveData/Databinding. Under that, all the fields are presented for the user to add another item to the shoe inventory. These fields are using 2-way databinding back to the ViewModel. These fields also have validation for correct values. The 'Add to inventory' button adds this item to the shoe list, which is updated in the Inventory List Screen as well as the 'total shoes in inventory' TextView at the top of this page. The user is navigated back to the Inventory List Screen after adding the item to inventory.
 
 ![Detail_Screen](images/detail1.png) 
